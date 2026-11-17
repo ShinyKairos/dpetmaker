@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+venv/
+build/
+dist/
+save/
+assets/
+mask/
+*.spec
+*.bak
+*.tmp
+editor/data/runtime_template/

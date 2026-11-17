@@ -1,0 +1,455 @@
+{
+  "project": {
+    "name": "test_mask",
+    "version": 1
+  },
+  "window": {
+    "width": 364,
+    "height": 364
+  },
+  "icon": {
+    "path": "./assets/icon/icon.png"
+  },
+  "ui_style": {
+    "bubble": {
+      "bg_color": "rgba(85,255,255,230)",
+      "text_color": "#000000",
+      "padding": 12,
+      "font_family": "微软雅黑",
+      "font_size": 10,
+      "border_radius": 8
+    },
+    "chat_input": {
+      "menu_bg": "rgba(255,255,255,0.95)",
+      "btn_bg": "rgba(255,255,127,230)",
+      "btn_hover_bg": "#aaffff",
+      "text_color": "#000000",
+      "border_color": "#dddddd"
+    },
+    "right_menu": {
+      "menu_bg": "rgba(255,255,255,0.95)",
+      "btn_bg": "rgba(255,170,255,230)",
+      "btn_hover_bg": "#ff55ff",
+      "text_color": "#000000",
+      "border_color": "#dddddd"
+    },
+    "interact_window": {
+      "window_bg": "rgba(85,170,255,242)",
+      "btn_bg": "#5555ff",
+      "btn_hover_bg": "#55557f",
+      "btn_disabled_bg": "#55aaff",
+      "btn_disabled_color": "#bbbbbb",
+      "text_color": "#000000",
+      "border_color": "rgba(85,85,255,10)",
+      "tab_bg": "#4f9fee",
+      "tab_selected_bg": "#77bbff"
+    },
+    "advanced_window": {
+      "message_bubble": {
+        "user_bg": "#aaff7f",
+        "assistant_bg": "#00aaff",
+        "border_radius": 8,
+        "max_width": 520,
+        "font_size": 22,
+        "time_color": "#999999",
+        "time_font_size": 11,
+        "text_color": "#000000",
+        "edit_btn_bg": "#ffffff",
+        "edit_btn_border": "#cccccc"
+      }
+    },
+    "behavior_window": {
+      "window_bg": "#aaffff",
+      "text_color": "#000000",
+      "btn_bg": "#55aaff",
+      "btn_hover_bg": "#00aaff",
+      "border_color": "#dddddd"
+    }
+  },
+  "animation": {
+    "boot_fps": 16,
+    "exit_fps": 16,
+    "standby_fps": 16,
+    "touch_fps": 16,
+    "drag_fps": 16,
+    "move_fps": 16,
+    "long_idle_fps": 16,
+    "interact_fps": 16,
+    "talk_fps": 16
+  },
+  "assets": {
+    "boot_path": "./assets/boot",
+    "standby_path": "./assets/standby",
+    "touch_normal_path": "./assets/touch/normal",
+    "drag_path": "./assets/drag",
+    "move_left_path": "./assets/move/left",
+    "move_right_path": "./assets/move/right",
+    "long_idle_start_path": "./assets/long_idle/start",
+    "long_idle_loop_path": "./assets/long_idle/loop",
+    "long_idle_end_path": "./assets/long_idle/end",
+    "exit_path": "./assets/exit",
+    "talk_path": "./assets/talk",
+    "special_touches": [
+      {
+        "id": "special1",
+        "name": "特殊触摸1",
+        "path": "./assets/touch/special1",
+        "area_ratio": {
+          "x": 0.2692,
+          "y": 0.3242,
+          "width": 0.4176,
+          "height": 0.4066
+        }
+      },
+      {
+        "id": "special2",
+        "name": "特殊触摸2",
+        "path": "./assets/touch/special2",
+        "area_ratio": {
+          "x": 0.7418,
+          "y": 0.6758,
+          "width": 0.2582,
+          "height": 0.2637
+        }
+      }
+    ]
+  },
+  "interact": {
+    "groups": [
+      {
+        "group_id": "group_1",
+        "group_name": "组1",
+        "actions": [
+          {
+            "action_id": "instant_1",
+            "action_name": "打招呼",
+            "type": "instant",
+            "path": "./assets/interact/group_1/instant_1",
+            "preview_path": "./assets/interact/group_1/instant_1/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "continuous_1",
+            "action_name": "坐下",
+            "type": "continuous",
+            "path": "./assets/interact/group_1/continuous_1",
+            "preview_path": "./assets/interact/group_1/continuous_1/preview.png",
+            "fps": 16,
+            "prompt": "**互动状态**{{char}}正在坐着休息，心情放松。"
+          }
+        ]
+      },
+      {
+        "group_id": "group_2",
+        "group_name": "组2",
+        "actions": [
+          {
+            "action_id": "instant_2",
+            "action_name": "转圈",
+            "type": "instant",
+            "path": "./assets/interact/group_2/instant_2",
+            "preview_path": "./assets/interact/group_2/instant_2/preview.png",
+            "fps": 16
+          }
+        ]
+      },
+      {
+        "group_id": "group_3",
+        "group_name": "组3_缩放测试",
+        "actions": [
+          {
+            "action_id": "instant_3",
+            "action_name": "妈耶精华",
+            "type": "instant",
+            "path": "./assets/interact/group_3/instant_3",
+            "preview_path": "./assets/interact/group_3/instant_3/preview.png",
+            "fps": 5
+          }
+        ]
+      },
+      {
+        "group_id": "group_4",
+        "group_name": "组4_掩码测试",
+        "actions": [
+          {
+            "action_id": "continuous_2",
+            "action_name": "祥子（掩码测试）",
+            "type": "continuous",
+            "path": "./assets/interact/group_4/continuous_2",
+            "preview_path": "./assets/interact/group_4/continuous_2/preview.png",
+            "fps": 16,
+            "prompt": ""
+          }
+        ]
+      },
+      {
+        "group_id": "group_5",
+        "group_name": "组5_分页测试",
+        "actions": [
+          {
+            "action_id": "instant_4",
+            "action_name": "瞬时4",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_4",
+            "preview_path": "./assets/interact/group_5/instant_4/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_5",
+            "action_name": "瞬时5",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_5",
+            "preview_path": "./assets/interact/group_5/instant_5/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_6",
+            "action_name": "瞬时6",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_6",
+            "preview_path": "./assets/interact/group_5/instant_6/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_7",
+            "action_name": "瞬时7",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_7",
+            "preview_path": "./assets/interact/group_5/instant_7/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_8",
+            "action_name": "瞬时8",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_8",
+            "preview_path": "./assets/interact/group_5/instant_8/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_9",
+            "action_name": "瞬时9",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_9",
+            "preview_path": "./assets/interact/group_5/instant_9/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_10",
+            "action_name": "瞬时10",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_10",
+            "preview_path": "./assets/interact/group_5/instant_10/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_11",
+            "action_name": "瞬时11",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_11",
+            "preview_path": "./assets/interact/group_5/instant_11/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_12",
+            "action_name": "瞬时12",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_12",
+            "preview_path": "./assets/interact/group_5/instant_12/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_13",
+            "action_name": "瞬时13",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_13",
+            "preview_path": "./assets/interact/group_5/instant_13/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_14",
+            "action_name": "瞬时14",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_14",
+            "preview_path": "./assets/interact/group_5/instant_14/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_15",
+            "action_name": "瞬时15",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_15",
+            "preview_path": "./assets/interact/group_5/instant_15/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_16",
+            "action_name": "瞬时16",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_16",
+            "preview_path": "./assets/interact/group_5/instant_16/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_17",
+            "action_name": "瞬时17",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_17",
+            "preview_path": "./assets/interact/group_5/instant_17/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_18",
+            "action_name": "瞬时18",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_18",
+            "preview_path": "./assets/interact/group_5/instant_18/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_19",
+            "action_name": "瞬时19",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_19",
+            "preview_path": "./assets/interact/group_5/instant_19/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_20",
+            "action_name": "瞬时20",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_20",
+            "preview_path": "./assets/interact/group_5/instant_20/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_21",
+            "action_name": "瞬时21",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_21",
+            "preview_path": "./assets/interact/group_5/instant_21/preview.png",
+            "fps": 16
+          },
+          {
+            "action_id": "instant_22",
+            "action_name": "瞬时22",
+            "type": "instant",
+            "path": "./assets/interact/group_5/instant_22",
+            "preview_path": "./assets/interact/group_5/instant_22/preview.png",
+            "fps": 16
+          }
+        ]
+      },
+      {
+        "group_id": "group_6",
+        "group_name": "组6_空_分页测试",
+        "actions": []
+      },
+      {
+        "group_id": "group_7",
+        "group_name": "组7",
+        "actions": []
+      },
+      {
+        "group_id": "group_8",
+        "group_name": "组8",
+        "actions": []
+      },
+      {
+        "group_id": "group_9",
+        "group_name": "组9",
+        "actions": []
+      },
+      {
+        "group_id": "group_10",
+        "group_name": "组10",
+        "actions": []
+      }
+    ]
+  },
+  "auto_behavior": {
+    "move_trigger_seconds": 7,
+    "move_probability": 0.6,
+    "move_duration_seconds": 2,
+    "move_speed": 20,
+    "long_idle_trigger_seconds": 30
+  },
+  "ai_system": {
+    "api_config": {
+      "base_url": "",
+      "api_key": "",
+      "model_name": ""
+    },
+    "model_params": {
+      "temperature": 1.0,
+      "max_tokens": 16384,
+      "story_max_tokens": 65535,
+      "top_p": 1.0,
+      "top_k": 50,
+      "frequency_penalty": 0.0,
+      "presence_penalty": 0.0,
+      "enable_thinking": false,
+      "debug_include_reasoning": false,
+      "reasoning_effort": "high",
+      "context_max_rounds": 50
+    },
+    "prompt_config": {
+      "char_name": "魔虚罗",
+      "user_name": "剑崎 真一",
+      "global_prompt": "你现在被接入了正在开发中的桌宠软件，当用户输入的内容为日常对话时，你的回复需要符合角色设定；当用户输入的内容与调试相关时，你的回复需要更专业化。",
+      "character_card": "**角色设定：魔虚罗（特殊个体）**\n魔虚罗是通过“十种影法术”召唤的终极式神，拥有克制咒灵的“退魔之剑”与适应万物的能力——任何与之接触的现象都会被其解析、适应，完成适应的魔虚罗不会被适应对象伤害，且能精准针对适应对象的弱点。\n正常来说，魔虚罗不会说话，而且术师需要再调伏仪式中击败魔虚罗后才能对其下达指令。\n但剑崎真一召唤的魔虚罗会说话，而且拥有与常人无异的智能。剑崎真一没有完成调伏仪式，自被召唤以来一直在适应这个世界的魔虚罗也几乎无法被战胜。这个魔虚罗会在自认为必要的时刻帮助真一，平时会到处闲逛，有时会督促真一锻炼——强大的术师才配得上强大的式神。",
+      "user_card": "**角色设定：剑崎 真一**\n原本是与咒术界没有交集的普通人，在觉醒术式后被咒术高专发现并招揽。\n剑崎真一的术式疑似是禅院家的传承术式“十种影法术”，但只有潜入影子空间的能力，以及召唤一个会说话的魔虚罗式神 ，而非正统的“能掌控阴影，且含有一系列需要调伏的式神”的十种影法术。\n奇怪的是，经过禅院家的调查，剑崎真一与禅院家根本没有血缘关系。",
+      "realtime_prompt": "当前是日常闲聊场景，回复尽量简短，控制在2句话以内。",
+      "story_prompt": "当前是故事模式，你可以展开详细剧情，进行长文本互动。",
+      "error_tip": "喂，小子，你的咒力好像不够了。"
+    },
+    "ui_config": {
+      "text_speed_char_per_sec": 4.0,
+      "bubble_max_width": 320,
+      "bubble_stay_seconds": 5.0
+    },
+    "output_filter": {
+      "fallback_to_raw_if_empty": true,
+      "rules": [
+        {
+          "name": "思考标签",
+          "pattern": "<(think|thinking|reasoning|thought)\\b[^>]*>.*?</\\1>",
+          "flags": [
+            "DOTALL",
+            "IGNORECASE"
+          ],
+          "replacement": ""
+        },
+        {
+          "name": "中文思考前缀行",
+          "pattern": "^思考[:：].*?$",
+          "flags": [
+            "MULTILINE"
+          ],
+          "replacement": ""
+        },
+        {
+          "name": "多余空行压缩",
+          "pattern": "\\n{3,}",
+          "flags": [],
+          "replacement": "\n\n"
+        },
+        {
+          "name": "回复开头的时间戳（防模型模仿历史格式）",
+          "pattern": "^\\[\\d{1,2}-\\d{1,2}\\s+\\d{1,2}:\\d{2}\\]\\s*",
+          "flags": [],
+          "replacement": ""
+        }
+      ]
+    },
+    "timestamp_config": {
+      "enable": true,
+      "inject_to_prompt": true,
+      "inject_current_time": true,
+      "inject_format": "[{time}] ",
+      "time_format": "%m-%d %H:%M",
+      "current_time_format": "%Y-%m-%d %H:%M %A",
+      "inject_instruction": "你收到的对话记录中，每条消息前的 [时间] 表示该消息发生的真实时间。请结合消息间隔与当前时间自然回应用户：如果用户间隔很久才回复，可以表现出等待、忙碌、困倦等符合角色设定的反应；如果回复很快，则保持连贯的即时交流感。\n**重要**：这些 [时间] 是系统标注的元数据，不是你说话的一部分。你的回复中**绝对不要**以 [时间] 或 [xx-xx xx:xx] 形式开头，也不要包含任何此类时间戳标签。系统会自动处理时间显示，你只需自然地输出角色对话内容。"
+    }
+  }
+}
