@@ -9,6 +9,7 @@
 - **AI 对话支持**：支持接入大语言模型接口，实现流式气泡对话与独立的故事模式。
 
 > 详细功能说明请查阅 Releases 内的说明书 `Manual.pdf`。
+> 前往下载入口：https://github.com/ShinyKairos/dpetmaker/releases
 
 > ⚠️ 重要提示
 本仓库仅包含程序源码。如需体验完整动画演示效果，请前往 Releases 下载 `resources.zip`，解压后将里面的 `assets` 和 `mask` 文件夹放到 `pet_runtime.py` 同级目录，重启桌宠程序即可加载动画与掩码；缺少动画素材时，桌宠仅托盘运行，属于预设兜底逻辑，并非故障。
