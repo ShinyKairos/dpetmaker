@@ -8,7 +8,7 @@
 - **一键封装**：基于预编译的运行时模板，生成免安装的成品 `.exe`。
 - **AI 对话支持**：支持接入大语言模型接口，实现流式气泡对话与独立的故事模式。
 
-> 详细功能说明请查阅 Releases 内的说明书 `Manual.pdf`。
+> 详细功能说明请查阅 Releases 页与说明书 `Manual.pdf`。
 > 
 > 下载入口：https://github.com/ShinyKairos/dpetmaker/releases
 
